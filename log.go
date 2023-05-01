@@ -13,11 +13,8 @@ func Log(mess string) {
 }
 
 func LogToFile(mess string, dir string) {
-    f, err := os.Create(dir + "/log.txt")
+    err := os.WriteFile("log.txt",[]byte(mess), 0666)
     if err != nil {
         log.Fatal(err)
     }
-    defer f.Close()
-
-    f.WriteString(mess + "\n")
 }
