@@ -2,6 +2,8 @@ package logger
 
 import (
     "fmt"
+    "os"
+    "log"
 )
 
 var Version string = "1.0"
