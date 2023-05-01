@@ -17,7 +17,7 @@ func LogToFile(mess string, dir string) {
     if err != nil{
         log.Fatal(err)
     }
-    if _, err := f.Write([]byte(mess)); err != nil {
+    if _, err := f.WriteString(mess); err != nil {
         log.Fatal(err)
     }
     if err := f.Close(); err != nil {
